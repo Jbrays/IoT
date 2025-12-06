@@ -1,0 +1,353 @@
+{
+    "version": 1,
+    "author": "Smart Parking Generator",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "board-esp32-devkit-c-v4",
+            "id": "esp",
+            "top": 0,
+            "left": 0,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-servo",
+            "id": "servoEntry",
+            "top": -150,
+            "left": 200,
+            "attrs": {
+                "horn": "cross"
+            }
+        },
+        {
+            "type": "wokwi-servo",
+            "id": "servoExit",
+            "top": -50,
+            "left": 200,
+            "attrs": {
+                "horn": "cross"
+            }
+        },
+        {
+            "type": "wokwi-slide-switch",
+            "id": "sw1",
+            "top": 150,
+            "left": -100,
+            "attrs": {
+                "label": "Sitio 1"
+            }
+        },
+        {
+            "type": "wokwi-slide-switch",
+            "id": "sw2",
+            "top": 150,
+            "left": -50,
+            "attrs": {
+                "label": "Sitio 2"
+            }
+        },
+        {
+            "type": "wokwi-slide-switch",
+            "id": "sw3",
+            "top": 150,
+            "left": 0,
+            "attrs": {
+                "label": "Sitio 3"
+            }
+        },
+        {
+            "type": "wokwi-slide-switch",
+            "id": "sw4",
+            "top": 150,
+            "left": 50,
+            "attrs": {
+                "label": "Sitio 4"
+            }
+        },
+        {
+            "type": "wokwi-slide-switch",
+            "id": "sw5",
+            "top": 150,
+            "left": 100,
+            "attrs": {
+                "label": "Sitio 5"
+            }
+        },
+        {
+            "type": "wokwi-slide-switch",
+            "id": "sw6",
+            "top": 250,
+            "left": -100,
+            "attrs": {
+                "label": "Sitio 6"
+            }
+        },
+        {
+            "type": "wokwi-slide-switch",
+            "id": "sw7",
+            "top": 250,
+            "left": -50,
+            "attrs": {
+                "label": "Sitio 7"
+            }
+        },
+        {
+            "type": "wokwi-slide-switch",
+            "id": "sw8",
+            "top": 250,
+            "left": 0,
+            "attrs": {
+                "label": "Sitio 8"
+            }
+        },
+        {
+            "type": "wokwi-slide-switch",
+            "id": "sw9",
+            "top": 250,
+            "left": 50,
+            "attrs": {
+                "label": "Sitio 9"
+            }
+        },
+        {
+            "type": "wokwi-slide-switch",
+            "id": "sw10",
+            "top": 250,
+            "left": 100,
+            "attrs": {
+                "label": "Sitio 10"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "esp:TX",
+            "$serialMonitor:RX",
+            "",
+            []
+        ],
+        [
+            "esp:RX",
+            "$serialMonitor:TX",
+            "",
+            []
+        ],
+        [
+            "servoEntry:V+",
+            "esp:5V",
+            "red",
+            []
+        ],
+        [
+            "servoEntry:GND",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "servoEntry:PWM",
+            "esp:15",
+            "orange",
+            []
+        ],
+        [
+            "servoExit:V+",
+            "esp:5V",
+            "red",
+            []
+        ],
+        [
+            "servoExit:GND",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "servoExit:PWM",
+            "esp:2",
+            "orange",
+            []
+        ],
+        [
+            "sw1:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "sw1:GND",
+            "esp:GND.2",
+            "black",
+            []
+        ],
+        [
+            "sw1:SIG",
+            "esp:13",
+            "green",
+            []
+        ],
+        [
+            "sw2:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "sw2:GND",
+            "esp:GND.2",
+            "black",
+            []
+        ],
+        [
+            "sw2:SIG",
+            "esp:12",
+            "green",
+            []
+        ],
+        [
+            "sw3:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "sw3:GND",
+            "esp:GND.2",
+            "black",
+            []
+        ],
+        [
+            "sw3:SIG",
+            "esp:14",
+            "green",
+            []
+        ],
+        [
+            "sw4:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "sw4:GND",
+            "esp:GND.2",
+            "black",
+            []
+        ],
+        [
+            "sw4:SIG",
+            "esp:27",
+            "green",
+            []
+        ],
+        [
+            "sw5:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "sw5:GND",
+            "esp:GND.2",
+            "black",
+            []
+        ],
+        [
+            "sw5:SIG",
+            "esp:26",
+            "green",
+            []
+        ],
+        [
+            "sw6:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "sw6:GND",
+            "esp:GND.2",
+            "black",
+            []
+        ],
+        [
+            "sw6:SIG",
+            "esp:25",
+            "green",
+            []
+        ],
+        [
+            "sw7:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "sw7:GND",
+            "esp:GND.2",
+            "black",
+            []
+        ],
+        [
+            "sw7:SIG",
+            "esp:33",
+            "green",
+            []
+        ],
+        [
+            "sw8:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "sw8:GND",
+            "esp:GND.2",
+            "black",
+            []
+        ],
+        [
+            "sw8:SIG",
+            "esp:32",
+            "green",
+            []
+        ],
+        [
+            "sw9:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "sw9:GND",
+            "esp:GND.2",
+            "black",
+            []
+        ],
+        [
+            "sw9:SIG",
+            "esp:35",
+            "green",
+            []
+        ],
+        [
+            "sw10:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "sw10:GND",
+            "esp:GND.2",
+            "black",
+            []
+        ],
+        [
+            "sw10:SIG",
+            "esp:34",
+            "green",
+            []
+        ]
+    ],
+    "dependencies": {}
+}

@@ -4,14 +4,14 @@ import { getDatabase, ref, set, onValue, update } from "firebase/database";
 // TODO: Replace with your actual Firebase configuration
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAUHXYlEmqcy0cDRyiFVlpjMvxlpH_dT4M",
-    authDomain: "iot-project-d2c5d.firebaseapp.com",
-    projectId: "iot-project-d2c5d",
-    storageBucket: "iot-project-d2c5d.firebasestorage.app",
-    messagingSenderId: "556839428138",
-    appId: "1:556839428138:web:17608d3499478ec24de353",
-    measurementId: "G-QCXPPB9RNJ",
-    databaseURL: "https://iot-project-d2c5d-default-rtdb.firebaseio.com"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+    databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL
 };
 
 const app = initializeApp(firebaseConfig);
